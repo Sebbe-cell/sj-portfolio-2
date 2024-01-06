@@ -3,6 +3,7 @@ import ParticlesContainer from "../../components/ParticlesContainer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import ProjectsSlider from "../../components/ProjectsSlider";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -28,10 +29,25 @@ const Projects = () => {
               confidential projects, feel free to reach out for a private
               discussion.`}
             </p>
+            <div className="pt-10">
+              <Link
+                className="btn-primary"
+                href={"https://github.com/sebbe-cell"}
+                target="_blank"
+              >
+                my github <span className="text-accent">repositories.</span>
+              </Link>
+            </div>
           </div>
-          <div className="flex items-center justify-center xl:w-[700px] w-[400px] xl:relative">
+          <motion.div
+            variants={fadeIn("down", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex items-center justify-center xl:w-[700px] w-[400px] xl:relative"
+          >
             <ProjectsSlider />
-          </div>
+          </motion.div>
         </div>
       </motion.div>
       <div className="w-[900px] h-full xl:absolute left-0 bottom-0 z-0">

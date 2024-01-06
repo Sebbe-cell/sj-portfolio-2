@@ -118,7 +118,7 @@ const ProjectsSlider = () => {
               </p>
             </div>
             <div className="hidden md:flex absolute left-[8rem] pl-4 top-[8.5rem] xl:left-[18rem] xl:top-[11rem]">
-              <Link className="btn-sm" href={item.path} target="_blank">View live</Link>
+              <Link className="btn-sm" href={item.path} target="_blank">view <span className="text-accent">live</span></Link>
             </div>
             <div>
               {item.imgSrc.map((imgItem) => (
