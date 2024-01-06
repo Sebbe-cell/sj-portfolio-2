@@ -6,14 +6,14 @@ import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 const About = () => {
   return (
     <div className="h-full">
-      <div className="text-center flex flex-col justify-center xl:text-left h-full container mx-auto">
+      <div className="text-center flex flex-col justify-center xl:text-left h-full xl:max-w-4xl container mx-auto">
         <h1 className="h1">about <span className="text-accent">me.</span></h1>
-        <p>
+        <p className="text-[14px] md:text-[16px] md:pb-2">
           {`My name is Sebastian, and I'm a dedicated developer with 2 years of
           experience in .NET and React. During my professional journey, I've
           focused on both Frontend and Backend development.`}
         </p>
-        <p>
+        <p className="text-[12px] md:text-[16px]">
           {`In Frontend, I've
           crafted and implemented user-friendly interfaces for web applications.
           Simultaneously, I've actively contributed to Backend tasks,
@@ -22,7 +22,7 @@ const About = () => {
           with both Frontend and Backend developers has been crucial in ensuring
           a seamless integration of user interfaces with system functionalities.`}
         </p>
-        <div className="flex items-center gap-x-5 text-lg pt-10">
+        <div className="flex items-center gap-x-5 text-lg pt-4 -mb-10 md:-mb-0">
           <Link
             href={""}
             className="hover:text-accent transition-all duration-300"

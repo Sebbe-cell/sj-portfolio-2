@@ -10,31 +10,57 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          {/* title */}
+          {/* title desktop */}
           <motion.h1
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:h1 text-[36px] pt-10 xl:p-0"
+            className="hidden xl:block xl:h1 text-[36px] pt-10 xl:p-0"
           >
-            Full Stack Developer with a strong commitment
-            <br /> to{" "}
-            <span className="text-accent">teamwork and collaboration.</span>
+            Full Stack Developer, merging technical expertise with collaborative
+            spirit for <span className="text-accent">success</span>
           </motion.h1>
-          {/* subtitle */}
+
+          {/* mobile */}
+          <motion.h1
+            variants={fadeIn("down", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="xl:hidden h2 pt-16 md:pt-1"
+          >
+            Agile Full Stack Developer
+            <br /> and <span className="text-accent">Innovator</span>
+          </motion.h1>
+
+          {/* subtitle desktop */}
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="hidden xl:flex max-w-xl mx-0 mb-10"
           >
             {`Hi, I'm Sebastian, a Full Stack Developer based in Sweden.
             Enthusiastic about crafting exceptional digital solutions, I
             specialize in full-stack development. With a passion for connecting
             people and fostering collaboration, I thrive in team environments.`}
           </motion.p>
+
+          {/* mobile */}
+          <motion.p
+            variants={fadeIn("down", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="xl:hidden md:max-w-xl max-w-sm mx-auto mb-1"
+          >
+            {`Hi, I'm Sebastian, a Full Stack Developer based in Sweden.
+            Enthusiastic about crafting exceptional digital solutions, I
+            specialize in full-stack development.`}
+          </motion.p>
+
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
