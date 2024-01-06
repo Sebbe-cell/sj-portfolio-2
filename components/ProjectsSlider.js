@@ -67,7 +67,7 @@ const data = [
   {
     id: 4,
     title: "NovaVest",
-    path: "/",
+    path: "https://novavestfinancial.netlify.app/",
     description:
       "Created a simple and user-friendly banking app prototype. This project is part of my ongoing exploration and experimentation, demonstrating my commitment to continuous learning and improvement in web development.",
     imgSrc: [
