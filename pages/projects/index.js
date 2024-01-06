@@ -16,9 +16,10 @@ const Projects = () => {
       >
         <div className="flex flex-col xl:flex-row justify-between items-center z-50 xl:gap-10">
           <div>
-            <h1 className="xl:h1 text-3xl pt-20 mb-10">
+            <h1 className="text-3xl xl:pt-20 xl:mb-10 md:-mt-20 md:h2 xl:h1 mb-4">
               my <span className="text-accent">projects.</span>
             </h1>
+            <div className="hidden md:flex xl:hidden border w-[500px] mt-2 mb-2"></div>
             <p className="hidden xl:flex">
               {`These are some of my showcased projects, demonstrating a range of
               skills and expertise. Please note that due to Non-Disclosure
