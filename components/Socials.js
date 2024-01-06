@@ -3,25 +3,38 @@ import {
   RiFacebookBoxLine,
   RiGoogleLine,
   RiLinkedinLine,
-  RiGithubLine
+  RiGithubLine,
 } from "react-icons/ri";
+import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <div>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiGoogleLine/>
+      <Link
+        href={"https://github.com/sebbe-cell"}
+        target="_blank"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiGithubLine />
       </Link>
-      </div>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiLinkedinLine/>
+      <Link
+        href={"https://www.linkedin.com/in/sebastian-johnsson-246899246"}
+        target="_blank"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiLinkedinLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiFacebookBoxLine/>
+      <Link
+        href="mailto: sebbelito.johnsson@gmail.com"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiGoogleLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiGithubLine/>
+      <Link
+        href="mailto: sebastian_johnsson@outlook.com"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <PiMicrosoftOutlookLogo />
       </Link>
     </div>
   );

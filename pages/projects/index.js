@@ -17,7 +17,7 @@ const Projects = () => {
         <div className="flex flex-col xl:flex-row justify-between items-center z-50 xl:gap-10">
           <div>
             <h1 className="xl:h1 text-3xl pt-20 mb-10">
-              My <span className="text-accent">Projects.</span>
+              my <span className="text-accent">projects.</span>
             </h1>
             <p className="hidden xl:flex">
               {`These are some of my showcased projects, demonstrating a range of
