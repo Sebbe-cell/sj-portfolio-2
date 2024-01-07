@@ -61,17 +61,17 @@ const Contact = () => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-  
+
     try {
       setLoading(true); // Set loading to true before the async operation
-  
+
       const isValid = handleValidationOnSubmit();
-  
+
       if (isValid) {
         setValues({ name: "", email: "", subject: "" });
-  
+
         const response = await sendContactForm(values);
-  
+
         if (response.ok) {
           toast.success("Email sent successfully");
         } else {
@@ -87,6 +87,11 @@ const Contact = () => {
       setLoading(false); // Reset loading state in the finally block
     }
   };
+
+  const email = process.env.EMAIL;
+  const pass = process.env.PASS;
+
+  console.log(email, pass);
 
   return (
     <div className="h-full">
@@ -104,8 +109,7 @@ const Contact = () => {
             </h1>
           ) : (
             <h1 className="h1 loading-text">
-              sending{' '}
-              <span className="text-accent">.</span>
+              sending <span className="text-accent">.</span>
               <span className="text-accent">.</span>
               <span className="text-accent">.</span>
             </h1>
