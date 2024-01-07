@@ -41,12 +41,66 @@
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
-
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   color: #f13024;
+}
+
+.loading-text {
+}
+
+.loading-text span {
+  display: inline-block;
+  opacity: 0;
+  animation: loadingAnimation 1.5s infinite;
+}
+
+.loading-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-text span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.loading-text span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.toast-continer {
+  display: none !important;
+}
+
+@media (max-width: 1199px) {
+  .toast-container {
+    position: absolute !important;
+    bottom: 80px !important;
+    right: 10px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .toast-container {
+    position: absolute !important;
+    bottom: 300px !important;
+    right: 100px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
 }
 
 @layer base {

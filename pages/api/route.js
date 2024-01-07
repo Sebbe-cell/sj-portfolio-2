@@ -10,9 +10,9 @@ const handler = async (req, res) => {
     try {
       await transporter.sendMail({
         ...mailOptions,
-        subject: data.subject,
-        text: "This is test",
-        html: "<h1>Test title</h1><p>Some body text</p>",
+        subject: data.name,
+        text: data.email,
+        html: `<h1>${data.name}</h1><h2>${data.email}</h2><p>${data.subject}</p>`,
       });
 
       return res.status(200).json({ success: true });

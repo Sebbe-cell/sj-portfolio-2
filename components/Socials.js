@@ -6,10 +6,31 @@ import {
   RiGithubLine,
 } from "react-icons/ri";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
+import { useState, useEffect } from "react";
 
 const Socials = () => {
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    const updateWindowHeight = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    updateWindowHeight();
+
+    window.addEventListener("resize", updateWindowHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateWindowHeight);
+    };
+  }, []);
+
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div
+      className={`${
+        windowHeight < 668 ? "hidden" : "flex items-center gap-x-5 text-lg"
+      }`}
+    >
       <Link
         href={"https://github.com/sebbe-cell"}
         target="_blank"

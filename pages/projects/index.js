@@ -29,7 +29,7 @@ const Projects = () => {
               confidential projects, feel free to reach out for a private
               discussion.`}
             </p>
-            <div className="pt-10">
+            <div className="xl:pt-10 py-10">
               <Link
                 className="btn-primary"
                 href={"https://github.com/sebbe-cell"}
