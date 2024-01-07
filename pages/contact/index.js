@@ -88,11 +88,6 @@ const Contact = () => {
     }
   };
 
-  const email = process.env.EMAIL;
-  const pass = process.env.PASS;
-
-  console.log(email, pass);
-
   return (
     <div className="h-full">
       <motion.div
