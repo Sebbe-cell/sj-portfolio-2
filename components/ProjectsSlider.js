@@ -1,15 +1,15 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import Link from "next/link";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import { FreeMode, Pagination } from "swiper";
-import Link from "next/link";
-
-const data = [
+const projectData = [
   {
     id: 1,
     title: "Kjellman Auto",
@@ -104,7 +104,7 @@ const ProjectsSlider = () => {
       modules={[FreeMode, Pagination]}
       className="xl:h-[600px] md:h-[400px] md:-mb-28 -m-0 xl:m-0 h-[340px] w-full"
     >
-      {data.map((item) => (
+      {projectData.map((item) => (
         <SwiperSlide key={item.id}>
           <div className="bg-[rgba(65, 47, 123, 0.15)] min-h-[400px] justify-center rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group">
             <div>
@@ -118,7 +118,9 @@ const ProjectsSlider = () => {
               </p>
             </div>
             <div className="hidden md:flex absolute left-[8rem] pl-4 top-[8.5rem] xl:left-[18rem] xl:top-[11rem]">
-              <Link className="btn-sm" href={item.path} target="_blank">view <span className="text-accent">live</span></Link>
+              <Link className="btn-sm" href={item.path} target="_blank">
+                view <span className="text-accent">live</span>
+              </Link>
             </div>
             <div>
               {item.imgSrc.map((imgItem) => (

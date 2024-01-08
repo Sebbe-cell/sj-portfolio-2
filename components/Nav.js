@@ -1,10 +1,8 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 // icons
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiEnvelope,
-} from "react-icons/hi2";
+import { HiHome, HiUser, HiViewColumns, HiEnvelope } from "react-icons/hi2";
 
 // nav data
 export const navData = [
@@ -18,14 +16,10 @@ export const navData = [
   },
 ];
 
-import Link from "next/link";
-
-import { useRouter } from "next/router";
-
 const Nav = () => {
   const router = useRouter();
   const pathName = router.pathname;
-  
+
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
       {/* inner */}

@@ -1,9 +1,11 @@
 import React from "react";
-import ParticlesContainer from "../../components/ParticlesContainer";
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+
+import ParticlesContainer from "../../components/ParticlesContainer";
 import ProjectsSlider from "../../components/ProjectsSlider";
-import Link from "next/link";
 
 const Projects = () => {
   return (

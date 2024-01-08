@@ -1,11 +1,11 @@
-import ParticlesContainer from "../../components/ParticlesContainer";
-
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
 import { useState } from "react";
-import Toaster from "../../components/Toaster";
+import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+
+import ParticlesContainer from "../../components/ParticlesContainer";
+import Toaster from "../../components/Toaster";
 import { sendContactForm } from "../../lib/api";
+import { fadeIn } from "../../variants";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -63,7 +63,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      setLoading(true); // Set loading to true before the async operation
+      setLoading(true);
 
       const isValid = handleValidationOnSubmit();
 
@@ -84,7 +84,7 @@ const Contact = () => {
       console.error(error);
       toast.error("Failed to send email");
     } finally {
-      setLoading(false); // Reset loading state in the finally block
+      setLoading(false);
     }
   };
 

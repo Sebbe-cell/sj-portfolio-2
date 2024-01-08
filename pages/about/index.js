@@ -1,10 +1,15 @@
-import ParticlesContainer from "../../components/ParticlesContainer";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+// icons
 import { RiLinkedinLine, RiGithubLine } from "react-icons/ri";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
-import DownloadButton from "../../components/DownloadButton";
-import { motion } from "framer-motion";
+
 import { fadeIn } from "../../variants";
+
+// components 
+import DownloadButton from "../../components/DownloadButton";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 const About = () => {
   return (

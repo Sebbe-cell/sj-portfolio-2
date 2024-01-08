@@ -1,12 +1,8 @@
-import Link from "next/link";
-import {
-  RiFacebookBoxLine,
-  RiGoogleLine,
-  RiLinkedinLine,
-  RiGithubLine,
-} from "react-icons/ri";
-import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+
+import { RiGoogleLine, RiLinkedinLine, RiGithubLine } from "react-icons/ri";
+import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
 const Socials = () => {
   const [windowHeight, setWindowHeight] = useState(0);

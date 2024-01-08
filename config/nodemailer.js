@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 const email = process.env.EMAIL;
 const pass = process.env.PASS;
 
-console.log(email, pass)
+console.log(email, pass);
 
 export const transporter = nodemailer.createTransport({
   host: "smtp.office365.com",
