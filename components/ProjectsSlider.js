@@ -102,7 +102,7 @@ const ProjectsSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="xl:h-[600px] md:h-[400px] md:-mb-28 -m-0 xl:m-0 h-[340px] w-full"
+      className="xl:h-[600px] md:h-[400px] md:-mb-28 -m-0 xl:-m-0 h-[340px]"
     >
       {projectData.map((item) => (
         <SwiperSlide key={item.id}>

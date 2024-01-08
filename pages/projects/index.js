@@ -3,11 +3,14 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+import { useWindowWidth } from "../../utils/windowWidthHelper";
 
 import ParticlesContainer from "../../components/ParticlesContainer";
 import ProjectsSlider from "../../components/ProjectsSlider";
 
 const Projects = () => {
+  const windowWidth = useWindowWidth();
+
   return (
     <div className="h-full">
       <motion.div
@@ -17,13 +20,12 @@ const Projects = () => {
         exit="hidden"
         className="text-center flex flex-col justify-center xl:text-left h-full container mx-auto z-50"
       >
-        <div className="flex flex-col xl:flex-row justify-between items-center z-50 xl:gap-10">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between items-center z-50 xl:gap-10">
+          <div className="md:max-w-[400px] pt-[10rem] xl:max-w-full xl:pt-0">
             <h1 className="text-3xl xl:pt-20 xl:mb-10 md:-mt-20 md:h2 xl:h1 mb-4">
               my <span className="text-accent">projects.</span>
             </h1>
-            <div className="hidden md:flex xl:hidden border w-[500px] mt-2 mb-2"></div>
-            <p className="hidden xl:flex">
+            <p className="hidden lg:flex">
               {`These are some of my showcased projects, demonstrating a range of
               skills and expertise. Please note that due to Non-Disclosure
               Agreements (NDAs), certain projects cannot be displayed publicly.
@@ -46,7 +48,9 @@ const Projects = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex items-center justify-center xl:w-[700px] w-[400px] xl:relative"
+            className={
+              windowWidth >= 1200 && windowWidth <= 1300 ? "pr-[50px] flex items-center justify-center xl:w-[700px] w-[400px] xl:relative" : "flex items-center justify-center xl:w-[700px] w-[400px] xl:relative"
+            }
           >
             <ProjectsSlider />
           </motion.div>

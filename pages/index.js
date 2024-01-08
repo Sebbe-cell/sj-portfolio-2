@@ -1,6 +1,7 @@
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 
+import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
@@ -18,8 +19,25 @@ const Home = () => {
             exit="hidden"
             className="hidden xl:block xl:h1 text-[36px] pt-10 xl:p-0"
           >
-            Full Stack Developer, merging technical expertise with collaborative
-            spirit for <span className="text-accent">success</span>
+            Fullstack Developer, shaping ideas into effective solutions
+            specializing in{" "}
+            {/* <span className="text-accent">.NET development</span> */}
+            <TypeAnimation
+              sequence={[
+                "React development",
+                1000,
+                ".NET development",
+                1000,
+                "Web design",
+                1000,
+                "API integrations",
+                1000,
+              ]}
+              speed={8}
+              deletionSpeed={60}
+              repeat={Infinity}
+              style={{color: 'rgb(241 48 36)'}}
+            />
           </motion.h1>
 
           {/* mobile */}
@@ -28,10 +46,25 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:hidden h2 pt-16 md:pt-1"
+            className="xl:hidden h1 md:h2 xl:h1 pt-6 md:pt-1"
           >
-            Agile Full Stack Developer
-            <br /> and <span className="text-accent">Innovator</span>
+            Agile Full Stack Developer and 
+            <br/>
+            <TypeAnimation
+              sequence={[
+                "Innovater",
+                1000,
+                ".NET developer",
+                1000,
+                "Web designer",
+                1000,
+                "React developer",
+                1000,
+              ]}
+              speed={20}
+              repeat={Infinity}
+              style={{color: 'rgb(241 48 36)'}}
+            />
           </motion.h1>
 
           {/* subtitle desktop */}

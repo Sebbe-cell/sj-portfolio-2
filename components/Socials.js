@@ -3,23 +3,11 @@ import Link from "next/link";
 
 import { RiGoogleLine, RiLinkedinLine, RiGithubLine } from "react-icons/ri";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
+import { useWindowHeight } from "../utils/windowHeightHelper";
 
 const Socials = () => {
-  const [windowHeight, setWindowHeight] = useState(0);
 
-  useEffect(() => {
-    const updateWindowHeight = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    updateWindowHeight();
-
-    window.addEventListener("resize", updateWindowHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateWindowHeight);
-    };
-  }, []);
+  const windowHeight = useWindowHeight();
 
   return (
     <div
