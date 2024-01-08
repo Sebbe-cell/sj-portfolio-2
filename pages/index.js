@@ -21,7 +21,6 @@ const Home = () => {
           >
             Fullstack Developer, shaping ideas into effective solutions
             specializing in{" "}
-            {/* <span className="text-accent">.NET development</span> */}
             <TypeAnimation
               sequence={[
                 "React development",
