@@ -21,7 +21,7 @@ const Projects = () => {
         className="text-center flex flex-col justify-center xl:text-left h-full container mx-auto z-50"
       >
         <div className="flex flex-col md:flex-row justify-between items-center z-50 xl:gap-10">
-          <div className="md:max-w-[400px] pt-[10rem] xl:max-w-full xl:pt-0">
+          <div className="md:max-w-[400px] xl:max-w-full xl:pt-0">
             <h1 className="text-3xl xl:pt-20 xl:mb-10 md:-mt-20 md:h2 xl:h1 mb-4">
               my <span className="text-accent">projects.</span>
             </h1>
